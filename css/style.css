@@ -1,0 +1,640 @@
+/* Fonts */
+@font-face {
+    font-family: 'poppins';
+    src: url(../assets/font/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: 'poppins-black';
+    src: url(../assets/font/Poppins-Black.ttf);
+}
+
+
+html {
+    background: #0D1321;
+}
+body {
+    margin: 0; padding: 0; overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+.mainbg {
+    position: fixed; width: 100%; height: 100%; opacity: .5;
+    background-image: url('../assets/img/spacebg.jpg'); background-position: center center;
+    background-repeat: no-repeat; background-size: cover;
+}
+.clickable {cursor: pointer;}
+#root {
+    position: absolute;
+}
+header {
+    width: 100%; padding: 2vw 0; display: flex; align-items: center; justify-content: center;
+}
+header .h-wrap{
+    width: 90%; display: flex; align-items: center; justify-content: space-between;
+}
+header img {
+    width: 15vw; height: auto;
+}
+header nav {
+    width: auto; display: flex; align-items: center; justify-content: space-between;
+}
+header nav div {
+    display: flex; align-items: center; justify-content: space-around;
+}
+header nav div a {
+    color: white; font: 1vw 'poppins';
+    margin: 0 2vw;
+}
+.con-wal {
+    background: linear-gradient(288deg, #00F3FD, #120385);
+    width: max-content;
+    padding: 1vw 2vw; color: white; border: none; outline: none;
+    border-radius: .7vw; font: 1.05vw 'poppins';
+    pointer-events: all; cursor: pointer;
+    animation: rotColor 1.5s infinite;
+}
+.con-wal-white {
+    background: white; margin: 0 auto; text-align: center;
+    width: max-content;
+    padding: 1vw 2vw; color: black; border: none; outline: none;
+    border-radius: .7vw; font: 1.05vw 'poppins';
+    cursor: pointer;
+}
+
+.con-wal-white:active {
+    background: linear-gradient(288deg, #00F3FD, #120385);
+    animation: rotColor 1.5s infinite; color: white;
+    transform: scale(1.03);
+}
+main {
+    width: 100%; display: flex; flex-direction: column; align-items: left;
+    margin-top: 2vw;
+}
+main section {
+    width: 95%; margin-left: 5%;
+    display: flex; justify-content: center; align-items: center;
+}
+main section div:nth-child(1) {
+    display: flex; flex-direction: column; width: 50%;
+}
+main section div:nth-child(1) .title {
+    font: bold 3vw 'poppins-black'; color: transparent;
+    width: 80%; 
+    background: linear-gradient(90deg, #00F3FD, #AA8BF8);
+    background-clip: text;
+}
+main section div:nth-child(1) .details {
+    margin-top: .2vw;
+    font: 1.02vw 'poppins'; color: #6A7587;
+}
+main section div:nth-child(1) button {
+    margin-top: 1.5vw;
+}
+.networks {
+    width: 100%; display: flex; align-items: center; justify-content: left;
+    flex-wrap: wrap; margin-top: 5vw;
+}
+.networks img {
+    margin-right: 5vw; margin-bottom: 2vw;
+}
+.networks img:nth-child(1) {height: 2.5vw;}
+.networks img:nth-child(2) {height: 2.5vw;}
+.networks img:nth-child(3) {height: 1.4vw;}
+.networks img:nth-child(4) {height: 1.3vw;}
+.networks img:nth-child(5) {height: 2vw;}
+main section div:nth-child(2) {
+    display: flex; flex-direction: column; width: 50%;
+    align-items: center; justify-content: center;
+}
+
+/* Solar System */
+.outer {
+    min-width: 45vw; height: 45vw; border: 1px dashed white;
+    border-radius: 50%; overflow: none;
+    display: flex; align-items: center; justify-content: center;
+}
+.mid {
+    min-width: 35vw; height: 35vw; border: 1px dashed white;
+    border-radius: 100%; overflow: none;
+    display: flex; align-items: center; justify-content: center;
+}
+.inner {
+    min-width: 25vw; height: 25vw; border: 1px dashed white;
+    border-radius: 100%; overflow: none;
+    display: flex; align-items: center; justify-content: center;
+    
+}
+.inner .main {
+    width: 15vw;
+}
+.out_img {
+    position: absolute; transform: translate(-20vw, -10vw);
+    width: 6vw;
+    animation: rotateplanet 15s linear infinite;
+}
+.out_img:nth-child(2) {
+    transform: translate(22.5vw, 0vw);
+}
+.out_img:nth-child(3) {
+    transform: translate(-5vw, 22vw);
+    width: 4vw;
+}
+.mid_img {
+    position: absolute; transform: translate(0, -17.5vw);
+    width: 6vw;
+    animation: rotateplanet 10s linear infinite;
+}
+.mid_img:nth-child(2) {
+    position: absolute; transform: translate(-16vw, 7vw);
+    width: 4vw;
+}
+.mid_img:nth-child(3) {
+    position: absolute; transform: translate(12.5vw, 12vw);
+}
+.in_img {
+    position: absolute; transform: translate(10.5vw, -7vw);
+    width: 3vw;
+    animation: rotateplanet 5s linear infinite;
+}
+
+
+
+main aside {
+    width: 90%; padding-top: 10vw; padding-bottom: 3vw; margin-left: 5%;
+    display: flex; justify-content: center; align-items: center;
+    border-radius: 2vw; background: linear-gradient(180deg, transparent, #151C2F 200%);
+}
+aside .a-wrap {
+    width: 95%; display: flex; align-items: center; justify-content: space-evenly;
+}
+.a-wrap article {
+    width: 13vw; height: 6.75vw; border: 2px solid #00F3FD; border-radius: 1vw;
+    padding: 2vw; display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.a-wrap article .amt {
+    font: 2vw 'poppins-black'; color: white;
+}
+.a-wrap article .text {
+    font: 1vw 'poppins'; color: #6A7587;
+}
+.a-wrap article:nth-child(2) {margin-top: -2vw;}
+.a-wrap article:nth-child(3) {margin-top: -4vw;}
+.a-wrap article:nth-child(4) {margin-top: -6vw;}
+
+footer {
+    width: 100%; margin: 3vw 0; display: flex; align-items: center; justify-content: center; color: white;
+    font: 1vw 'poppins';
+}
+.popup {
+    display: none;
+}
+.popuprd {
+    display: none;
+}
+.popup, .popuprd {
+    justify-content: center; align-items: center; width: 100%; height: 100%;
+    top: 0; left: 0; background-color: #0D1321AA; position: fixed;
+}
+.popup .info {
+    width: 40vw; height: 25vw; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    background-color: #151C2F; border-radius: 2vw;
+}
+.popup .info svg {
+    width: 5vw;
+}
+.popup .info label {
+    font: 1.2vw 'poppins'; color: white;
+}
+.popup .info span, .popuprd .info span {
+    font: 1vw 'poppins'; margin: 0 auto; color: #00F3FD; cursor: pointer; pointer-events: all;
+    margin-top: 2vw; 
+}
+.popuprd #rd {
+    height: 80vh; width: 50%; display: flex; flex-direction: column; justify-content: space-between;
+    align-items: center; border-radius: 2vw;
+    padding: 5vh 0; background-color: #151C2F;
+}
+#migrate #rd, #resolve #rd {
+    height: 50vh;
+}
+.popuprd #rd label {
+    font-size: 1.5vw; font-family: 'poppins-black'; color: #00F3FD;
+}
+.popuprd #rd div {
+    width: 90%; height: 80%; padding: 1vw; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #00F3FD; scrollbar-gutter: auto;
+    scrollbar-arrow-color: #00F3FD; scrollbar-highlight-color: #00F3FD; scrollbar-base-color: #00F3FD;
+    scrollbar-face-color: #00F3FD; scrollbar-track-color: #00F3FD; scrollbar-shadow-color: #00F3FD; scrollbar-3dlight-color: #00F3FD; scrollbar-highlight-color: #00F3FD;
+    display: flex; flex-direction: column; color: white; font: 1vw 'poppins';
+    text-align: justify;
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        width: 100%; padding: 5vw 0; display: flex; align-items: center; justify-content: center;
+    }
+    header .h-wrap{
+        width: 90%; display: flex; align-items: center; justify-content: space-between;
+    }
+    header img {
+        width: 35vw; height: auto;
+    }
+    header nav {
+        width: 100%; display: flex; align-items: center; justify-content: space-between;
+        position: absolute; margin-top: 30vw;
+    }
+    header nav div {
+        display: flex; align-items: center; justify-content: space-around;
+    }
+    header nav div a {
+        color: #AA8BF8; font: 2.7vw 'poppins';
+        margin: 0 2vw;
+    }
+    .con-wal {
+        background: linear-gradient(288deg, #00F3FD, #120385);
+        width: max-content;
+        padding: 2vw 3vw; color: white; border: none; outline: none;
+        border-radius: 2vw; font: 3vw 'poppins';
+        pointer-events: all; cursor: pointer;
+        animation: rotColor 1.5s infinite;
+    }
+    
+    .con-wal:active {
+        transform: scale(1.03);
+    }
+    .con-wal-white {
+        background: white; margin: 0 auto;
+        width: max-content;
+        padding: 2vw 3vw;  border: none; outline: none;
+        border-radius: 2vw; font: 3vw 'poppins';
+        pointer-events: all; cursor: pointer;
+    }
+    
+    .con-wal-white:active {
+        background: linear-gradient(288deg, #00F3FD, #120385);
+        animation: rotColor 1.5s infinite;
+        transform: scale(1.03);
+    }
+    main {
+        width: 100%; display: flex; flex-direction: column; align-items: left;
+        margin-top: 15vw; padding-top: 10vw;
+    }
+    main section {
+        width: 95%; margin-left: 5%;
+        display: flex; flex-direction: column-reverse; justify-content: center; align-items: flex-start;
+        overflow-x: none;
+    }
+    main section div:nth-child(1) {
+        display: flex; flex-direction: column; width: 100%;
+    }
+    main section div:nth-child(1) .title {
+        margin-top: 15vw;
+        font: bold 7vw 'poppins-black'; color: transparent;
+        width: 90%; 
+        background: linear-gradient(90deg, #00F3FD, #AA8BF8);
+        background-clip: text;
+    }
+    main section div:nth-child(1) .details {
+        margin-top: 2vw;
+        font: 3vw 'poppins'; color: #6A7587;
+    }
+    main section div:nth-child(1) button {
+        margin-top: 10vw;
+        width: 95%;
+        padding: 4vw 3vw; color: white; border: none; outline: none;
+        border-radius: 2vw; font: 3vw 'poppins';
+    }
+    .networks {
+        width: 100%; display: flex; align-items: center; justify-content: left;
+        flex-wrap: wrap; margin-top: 15vw;
+    }
+    .networks img {
+        margin-right: 5vw; margin-bottom: 2vw;
+    }
+    .networks img:nth-child(1) {height: 5vw;}
+    .networks img:nth-child(2) {height: 5vw;}
+    .networks img:nth-child(3) {height: 2.8vw;}
+    .networks img:nth-child(4) {height: 2.6vw;}
+    .networks img:nth-child(5) {height: 4vw;}
+    main section div:nth-child(2) {
+        display: flex; flex-direction: column; width: 50%;
+        align-items: flex-end; justify-content: center;
+        margin-left: 25%; transform: scale(1.5);
+    }
+    
+    /* Solar System */
+    .outer {
+        min-width: 45vw; height: 45vw; border: .2px dashed white;
+        border-radius: 50%; overflow: none;
+        display: flex; align-items: center; justify-content: center;
+    }
+    .mid {
+        min-width: 35vw; height: 35vw; border: .2px dashed white;
+        border-radius: 100%; overflow: none;
+        display: flex; align-items: center; justify-content: center;
+    }
+    .inner {
+        min-width: 25vw; height: 25vw; border: .2px dashed white;
+        border-radius: 100%; overflow: none;
+        display: flex; align-items: center; justify-content: center;
+        
+    }
+    .inner .main {
+        width: 15vw;
+    }
+    .out_img {
+        position: absolute; transform: translate(-20vw, -10vw);
+        width: 6vw;
+        animation: rotateplanet 15s linear infinite;
+    }
+    .out_img:nth-child(2) {
+        transform: translate(22.5vw, 0vw);
+    }
+    .out_img:nth-child(3) {
+        transform: translate(-5vw, 22vw);
+        width: 4vw;
+    }
+    .mid_img {
+        position: absolute; transform: translate(0, -17.5vw);
+        width: 6vw;
+        animation: rotateplanet 10s linear infinite;
+    }
+    .mid_img:nth-child(2) {
+        position: absolute; transform: translate(-16vw, 7vw);
+        width: 4vw;
+    }
+    .mid_img:nth-child(3) {
+        position: absolute; transform: translate(12.5vw, 12vw);
+    }
+    .in_img {
+        position: absolute; transform: translate(10.5vw, -7vw);
+        width: 3vw;
+        animation: rotateplanet 5s linear infinite;
+    }
+    
+    
+    
+    main aside {
+        width: 90%; padding-top: 10vw; padding-bottom: 3vw; margin-left: 5%;
+        display: flex; justify-content: center; align-items: center;
+        border-radius: 2vw; background: linear-gradient(180deg, transparent, #151C2F 200%);
+    }
+    aside .a-wrap {
+        width: 95%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
+    }
+    .a-wrap article {
+        width: 70%; height: 25vw; border: 2px solid #00F3FD; border-radius: 3vw;
+        padding: 2vw; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    }
+    .a-wrap article .amt {
+        font: 5vw 'poppins-black'; color: white;
+    }
+    .a-wrap article .text {
+        font: 3vw 'poppins'; color: #6A7587;
+    }
+    .a-wrap article:nth-child(2) {margin-top: -2vw;}
+    .a-wrap article:nth-child(3) {margin-top: -2vw;}
+    .a-wrap article:nth-child(4) {margin-top: -2vw;}
+    
+    footer {
+        width: 100%; margin: 10vw 0; display: flex; align-items: center; justify-content: center; color: white;
+        font: 2.7vw 'poppins';
+    }
+    .popup {
+        display: none;
+    }
+    .popuprd {
+        display: none;
+    }
+    .popup, .popuprd {
+        position: fixed; justify-content: center; align-items: center; width: 100%; height: 100%;
+        top: 0; left: 0; background-color: #0D1321AA;
+    }
+    .popup .info, .popuprd .info {
+        width: 80vw; height: 45vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+        background-color: #151C2F; border-radius: 5vw;
+    }
+    .popup .info svg {
+        width: 15vw;
+    }
+    .popup .info label {
+        font: 4vw 'poppins'; color: white;;
+    }
+    .popup .info span, .popuprd .info span {
+        font: 3vw 'poppins'; margin: 0 auto; color: #00F3FD; cursor: pointer; pointer-events: all;
+        margin-top: 16vw;
+    }
+    .popuprd #rd {
+        height: 70vh; width: 90%; display: flex; flex-direction: column; justify-content: space-between;
+        padding: 5vh 0; align-items: center;
+    }
+    .popuprd #rd label {
+        font-size: 5vw; font-family: 'poppins-black'; color: #00F3FD;
+    }
+    .popuprd #rd div {
+        width: 90%; height: 90%; padding: 1vw; overflow-y: auto; scrollbar-width: thin; scrollbar-color: #00F3FD; scrollbar-gutter: auto;
+        scrollbar-arrow-color: #00F3FD; scrollbar-highlight-color: #00F3FD; scrollbar-base-color: #00F3FD;
+        scrollbar-face-color: #00F3FD; scrollbar-track-color: #00F3FD; scrollbar-shadow-color: #00F3FD; scrollbar-3dlight-color: #00F3FD; scrollbar-highlight-color: #00F3FD;
+        display: flex; flex-direction: column; color: white; font: 3vw 'poppins';
+        text-align: justify;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes rotColor {
+    0% {background: linear-gradient(288deg, #00F3FD, #120385);}
+    10% {background: linear-gradient(324deg, #00F3FD, #120385);}
+    20% {background: linear-gradient(360deg, #00F3FD, #120385);}
+    30% {background: linear-gradient(36deg, #00F3FD, #120385);}
+    40% {background: linear-gradient(72deg, #00F3FD, #120385);}
+    50% {background: linear-gradient(108deg, #00F3FD, #120385);}
+    60% {background: linear-gradient(144deg, #00F3FD, #120385);}
+    70% {background: linear-gradient(180deg, #00F3FD, #120385);}
+    80% {background: linear-gradient(216deg, #00F3FD, #120385);}
+    90% {background: linear-gradient(252deg, #00F3FD, #120385);}
+    100% {background: linear-gradient(288deg, #00F3FD, #120385);}
+}
+
+@keyframes rotateplanet {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+
+
+
+
+
+
+
+.stageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.6);
+}
+
+.stage {
+  position: relative;
+  width: 50px;
+  height: 100px;
+  transform-origin: center center;
+  -webkit-animation: rotate 3s 0.75s ease-in-out infinite;
+          animation: rotate 3s 0.75s ease-in-out infinite;
+}
+.stage:before, .stage:after {
+  z-index: -1;
+  content: "";
+  border: solid 4px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 50%;
+  -webkit-clip-path: inset(0 60% 0 0);
+          clip-path: inset(0 60% 0 0);
+  width: 100%;
+  height: 50%;
+  -webkit-animation: shadow 3s 0.75s linear infinite;
+          animation: shadow 3s 0.75s linear infinite;
+  opacity: 0;
+}
+.stage:after {
+  position: absolute;
+  top: -1px;
+  left: -18px;
+}
+.stage:before {
+  position: absolute;
+  bottom: -1px;
+  right: -18px;
+  transform: rotate(180deg);
+}
+
+.clock {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: solid 50px #00F3FD;
+  border-bottom: solid 25px transparent;
+  border-left: solid 25px transparent;
+  border-right: solid 25px transparent;
+}
+.clock:before, .clock:after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: -47px;
+  width: 0;
+  height: 0;
+  border-top: solid 44px #f3f3f3;
+  border-bottom: solid 20px transparent;
+  border-left: solid 20px transparent;
+  border-right: solid 20px transparent;
+}
+.clock:after {
+  border-top: solid 44px #00F3FD;
+  will-change: transform;
+  -webkit-animation: clock1 3s linear infinite;
+          animation: clock1 3s linear infinite;
+}
+.clock:last-child {
+  transform: rotate(180deg) translateY(50px);
+}
+.clock:last-child:after {
+  transform: scale(0);
+  -webkit-animation: clock2 3s linear infinite;
+          animation: clock2 3s linear infinite;
+}
+
+@-webkit-keyframes clock1 {
+  20%, 50% {
+    transform: scale(0);
+  }
+  70%, 100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes clock1 {
+  20%, 50% {
+    transform: scale(0);
+  }
+  70%, 100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes clock2 {
+  20%, 50% {
+    transform: scale(1);
+  }
+  70%, 100% {
+    transform: scale(0);
+  }
+}
+@keyframes clock2 {
+  20%, 50% {
+    transform: scale(1);
+  }
+  70%, 100% {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes shadow {
+  10% {
+    opacity: 1;
+  }
+  20%, 50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  70%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes shadow {
+  10% {
+    opacity: 1;
+  }
+  20%, 50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  70%, 100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rotate {
+  20%, 50% {
+    transform: rotate(180deg);
+  }
+  70%, 100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  20%, 50% {
+    transform: rotate(180deg);
+  }
+  70%, 100% {
+    transform: rotate(360deg);
+  }
+}

